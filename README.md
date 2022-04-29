@@ -1,2 +1,0 @@
-# ToriRay
-univ
