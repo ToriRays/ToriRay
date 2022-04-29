@@ -1,0 +1,35 @@
+{
+	"employeeData": 
+	[
+		{
+			"employeeName": "Alan",	
+			"id": 100,
+			"managerId": 150	
+		},
+		{
+			"employeeName": "Martin",	
+			"id": 220,
+			"managerId": 100	
+		},	
+		{
+			"employeeName": "Jamie",	
+			"id": 150,
+			"managerId": ""
+		},
+		{
+			"employeeName": "Alex",	
+			"id": 275,
+			"managerId": 100	
+		},	
+		{
+			"employeeName": "Steve",	
+			"id": 400,
+			"managerId": 150	
+		},
+		{
+			"employeeName": "David",	
+			"id": 190,
+			"managerId": 400	
+		}
+	]
+}

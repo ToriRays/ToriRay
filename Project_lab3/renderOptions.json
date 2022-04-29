@@ -1,0 +1,21 @@
+{
+	"renderOptions": 
+	[
+		{
+			"label": "Full employees list",	
+			"value": "opt1"
+		},
+		{
+			"label": "Hierarchical relationship among employees",	
+			"value": "opt2"
+		},
+		{
+			"label": "Employee without manager",	
+			"value": "opt3"
+		},
+		{
+			"label": "Manager who is not a valid employee",	
+			"value": "opt4"
+		}		
+	]
+}

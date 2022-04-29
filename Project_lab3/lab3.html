@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html ng-app="myEmpDataApp" ng-controller="browseEmpData">
+  <head>
+<html>
+ <head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Lab3</title>
+  <img src="FQ_3VXJVEAADbYx.jpg"
+  width="400" 
+  height="400"/>
+  <img src="FPW6ALDWYAIQhy2.jpg"
+  width="400" 
+  height="400"/>
+  <img src="photo_2022-01-04_22-30-26.jpg"
+  width="400" 
+  height="400"/>
+ </head>
+ <body>
+ <hr>
+  <h2>Cat at the pond</h2>
+  <!-- Комментарий -->
+  <p><b>Lord II</b></p>
+  <p>meow@gmail.com</p>
+  <p>Pond</p>
+  <p>+90884949989</p>
+  <p>Meow404.com</p>
+  <p><i>Company "Cat kingdom" sells a huge amount of fish, <p>
+  <p>however because of naughty commercial director going to announce bankruptcy</i></p>
+  <hr>
+<h2>Depressed coworker</h2>
+<p><b>Ari</b></p>
+  <p>jelpmeow@gmail.com</p>
+  <p>Cat Kingdom's office</p>
+  <p>+90894949989</p>
+  <p>Meow404.com</p>
+  <p><i>Company "Cat kingdom" sells a huge amount of fish, <p>
+  <p>however because of naughty commercial director going to announce bankruptcy</i></p>
+<hr>
+<h2>Homeless coworker</h2>
+<p><b>Jinx</b></p>
+  <p>jinxpmeow@gmail.com</p>
+  <p>homeless</p>
+  <p>+99894949989</p>
+  <p>Meow404.com</p>
+  <p><i>Company "Cat kingdom" sells a huge amount of fish, <p>
+  <p>however because of naughty commercial director going to announce bankruptcy</i></p>
+<hr>
+ </body>
+ 
+</html>
+    <meta charset="utf-8">
+    <title>Empolyee Data Navigation</title>
+	<link href="style.css" rel="stylesheet" type="text/css"/>
+
+
+	<script type="text/javascript" src="https://code.angularjs.org/1.4.0-rc.2/angular.min.js">
+
+	<script src="js/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="js/jquery-3.2.1.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	
+	<!--ssscript src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script-->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>	
+	<script src="script-ok.js"></script>
+	
+	<style>
+		div.gradient_test {
+			background: linear-gradient(to right, #66ff99 0%, #0066ff 100%);
+		}
+	</style>	
+  </head>
+  <body>
+	<div>
+		<h2>Empolyee Data Navigation</h2>
+		<hr/>
+		
+		<label>what to view: 
+			<br/>
+			<select ng-model="value" ng-change="changeFunc(value)">
+				<option ng-repeat="o in renderOptions" value="{{o.value}}" ng-selected="$index===0" class="renderOpt">{{o.label}}</option>
+			</select>				
+		</label>
+		<hr/>
+		
+		<table>
+			<thead style="color:blue" ng-model="renderOption" ng-show="renderOption != 'opt2'">
+				<tr>
+					<td >Employee Name</td><td>ID</td><td>Manager ID</td>
+				</tr>
+			</thead>
+			<tr class="employee" ng-repeat="e in searchResult" ng-model="renderOption" ng-show="renderOption != 'opt2'">
+				<td align="center">{{e.employeeName}}</td><td align="center">{{e.id}}</td><td align="center">{{e.managerId}}</td>
+			</tr>
+			<tr ng-repeat="h in hierarchy" ng-model="renderOption" ng-show="renderOption == 'opt2'" ng-switch="h.level">
+				<td ng-switch-when="1">{{h.name}}</td><td></td><td></td><td></td><td></td>
+				<td></td><td ng-switch-when="2">{{h.name}}</td><td></td><td></td><td></td>
+				<td></td><td></td><td ng-switch-when="3">{{h.name}}</td><td></td><td></td>			
+				<td></td><td></td><td></td><td ng-switch-when="4">{{h.name}}</td><td></td>
+				<td></td><td></td><td></td><td></td><td ng-switch-when="5">{{h.name}}</td>				
+			</tr>			
+		</table>		
+	</div>
+  </body>
+</html>
