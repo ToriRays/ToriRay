@@ -1,0 +1,3 @@
+C:\Диск D\3 Курс(2 семестер)\Веб-програмування\first-servers\obj\Debug\first-servers.njsproj.AssemblyReference.cache
+C:\Диск D\3 Курс(2 семестер)\Веб-програмування\first-servers\obj\Debug\first-servers.njsproj.CoreCompileInputs.cache
+C:\Диск D\3 Курс(2 семестер)\Веб-програмування\first-servers\bin\Microsoft.NodejsTools.WebRole.dll
